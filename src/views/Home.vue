@@ -5,8 +5,8 @@
       <h1>Nature UI</h1>
       <h2>一个以绿色为主题，基于Vue3.0的桌面组件库</h2>
       <p class="actions">
-        <a href="https://github.com">GitHub</a>
-        <router-link to="/doc">开始</router-link>
+        <a href="https://github.com" title="获取源码" >GitHub</a>
+        <router-link to="/doc" title="开始教程">开始</router-link>
       </p>
     </div>
   </div>
@@ -24,18 +24,29 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightgreen;
+  background: #52c41a;
+  >h1{
+    margin-bottom: 20px;
+  }
+  >h2{
+    margin-bottom: 15px;
+  }
   > .actions{
     padding: 8px 0;
+    margin-top: 60px;
     a {
       margin:0 8px;
       background: #fff;
       display: inline-block;
-      $h: 28px;
+      $h: 38px;
       height: $h;
       line-height: $h;
       border-radius: $h/2;
       padding: 0 8px;
+      text-decoration: none;
+    }
+    a:hover{
+      transform: scale(1.1);
     }
   }
 }

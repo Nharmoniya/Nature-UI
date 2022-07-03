@@ -1,12 +1,16 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <img src="../assets/Logo.png" class="toplogo" alt="logo"/>
+    </div>
+
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>指南</li>
+      <li>主题</li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
   </div>
+  <hr/>
 </template>
 <script lang="ts">
 import { inject, Ref } from "vue";
@@ -22,7 +26,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
+  background: white;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -32,6 +36,12 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
+  > .toplogo{
+
+    >span{
+      font-size: 48px;
+    }
+  }
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -40,8 +50,17 @@ export default {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    list-style: none;
+    margin-right: 30px;
     > li {
       margin: 0 1em;
+      color: #52c41a;
+      font-size: 16px;
+
+    }
+    >li:hover{
+      color: #237804;
+      cursor: pointer;
     }
   }
   > .toggleAside {
@@ -53,6 +72,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    border: 1px solid red;
   }
   @media (max-width: 500px) {
     > .menu {

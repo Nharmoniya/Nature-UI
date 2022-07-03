@@ -55,6 +55,8 @@ export default {
 }
 .content {
   display: flex;
+  margin-top: 20px;
+
   > aside {
     flex-shrink: 0;
   }
@@ -65,7 +67,7 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  background: white;
   width: 150px;
   padding: 16px;
   position: fixed;
@@ -75,14 +77,20 @@ aside {
   height: 100%;
   > h2 {
     margin-bottom: 4px;
+    margin-top: 10px;
   }
   > ol {
+    list-style: none;
     > li {
-      padding: 4px 0;
+      padding: 8px 0;
     }
   }
 }
 main {
   overflow: auto;
+}
+a{
+  text-decoration: none;
+  color: #52c41a;
 }
 </style>
