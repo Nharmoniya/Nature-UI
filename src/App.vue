@@ -25,4 +25,17 @@ export default {
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #73d13d;
+  background-image: -webkit-linear-gradient(45deg,rgb(255,255,255,0.4));
+  border-radius: 32px;
+}
+::-webkit-scrollbar-track{
+  background-color: #f0f0f0;
+  border-radius:32px;
+}
 </style>

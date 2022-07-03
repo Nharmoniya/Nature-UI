@@ -1,12 +1,20 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <img src="../assets/Logo.png" class="toplogo" alt="logo"/>
+      <router-link to="/home">
+      <img src="../assets/Logo.png" class="toplogo" alt="logo" title="返回首页"/>
+      </router-link>
     </div>
-
     <ul class="menu">
-      <li>指南</li>
-      <li>主题</li>
+      <li>
+       <router-link to="/doc">组件</router-link>
+      </li>
+      <li>
+        <router-link to="/helper">指南</router-link>
+      </li>
+      <li>
+        <router-link to="/theme">主题</router-link>
+      </li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
   </div>
@@ -36,8 +44,8 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
+  border-bottom:2px solid #dcdfe6;
   > .toplogo{
-
     >span{
       font-size: 48px;
     }
@@ -52,16 +60,21 @@ export default {
     flex-wrap: nowrap;
     list-style: none;
     margin-right: 30px;
+    height: 100%;
     > li {
       margin: 0 1em;
       color: #52c41a;
       font-size: 16px;
-
+      .router-link-exact-active{
+        color: #237804;
+        border-bottom: 3px solid green;
+      }
     }
     >li:hover{
       color: #237804;
       cursor: pointer;
     }
+
   }
   > .toggleAside {
     width: 24px;
@@ -86,4 +99,9 @@ export default {
     }
   }
 }
+a{
+  text-decoration: none;
+  color: #52c41a;
+}
+
 </style>

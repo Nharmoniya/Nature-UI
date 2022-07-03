@@ -6,20 +6,24 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            Switch 开关
+            <router-link to="/doc/switch"></router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            Button 按钮
+            <router-link to="/doc/button"></router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            Dialog 对话框
+            <router-link to="/doc/dialog"></router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            Tabs 标签
+            <router-link to="/doc/tabs"></router-link>
           </li>
         </ol>
       </aside>
-      <main>
+      <main class="content-box">
         <router-view />
       </main>
     </div>
@@ -46,7 +50,6 @@ export default {
   }
   > .content {
     flex-grow: 1;
-    padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
       padding-left: 0;
@@ -56,7 +59,6 @@ export default {
 .content {
   display: flex;
   margin-top: 20px;
-
   > aside {
     flex-shrink: 0;
   }
@@ -77,20 +79,24 @@ aside {
   height: 100%;
   > h2 {
     margin-bottom: 4px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   > ol {
     list-style: none;
     > li {
       padding: 8px 0;
+      color: #52c41a;
+    }
+    >li:hover{
+      color: #237804;
+      cursor: pointer;
     }
   }
 }
 main {
-  overflow: auto;
+  overflow:auto;
 }
 a{
   text-decoration: none;
-  color: #52c41a;
 }
 </style>

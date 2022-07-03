@@ -4,11 +4,13 @@
     <div class="banner">
       <h1>Nature UI</h1>
       <h2>一个以绿色为主题，基于Vue3.0的桌面组件库</h2>
+      <h3>源代码采用 TypeScript 书写,CSS预处理器为SCSS</h3>
       <p class="actions">
         <a href="https://github.com" title="获取源码" >GitHub</a>
         <router-link to="/doc" title="开始教程">开始</router-link>
       </p>
     </div>
+    <footer><span>作者:JasonTu | 微信：Cropsrain874572491 | <a href="https://www.zhihu.com/people/naturl-63/posts">博客：https://www.zhihu.com/people/naturl-63/posts</a></span></footer>
   </div>
 </template>
 <script lang="ts">
@@ -19,7 +21,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .banner {
-  padding: 100px 0;
+  padding: 180px  0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,5 +51,12 @@ export default {
       transform: scale(1.1);
     }
   }
+}
+footer{
+  transform: translateY(50%);
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 </style>
