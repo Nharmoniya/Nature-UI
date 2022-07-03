@@ -1,42 +1,39 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" />
+    <Topnav class="nav"/>
     <div class="content">
       <aside v-if="menuVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
-            Switch 开关
-            <router-link to="/doc/switch"></router-link>
+            <router-link to="/doc/switch">Switch 开关</router-link>
           </li>
           <li>
-            Button 按钮
-            <router-link to="/doc/button"></router-link>
+            <router-link to="/doc/button">Button 按钮</router-link>
           </li>
           <li>
-            Dialog 对话框
-            <router-link to="/doc/dialog"></router-link>
+            <router-link to="/doc/dialog">Dialog 对话框</router-link>
           </li>
           <li>
-            Tabs 标签
-            <router-link to="/doc/tabs"></router-link>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
           </li>
         </ol>
       </aside>
       <main class="content-box">
-        <router-view />
+        <router-view/>
       </main>
     </div>
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
-import { inject, Ref } from "vue";
+import Topnav from '../components/Topnav.vue';
+import {inject, Ref} from 'vue';
+
 export default {
-  components: { Topnav },
+  components: {Topnav},
   setup() {
-    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
-    return { menuVisible };
+    const menuVisible = inject<Ref<boolean>>('menuVisible'); // get
+    return {menuVisible};
   },
 };
 </script>
@@ -45,9 +42,11 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
   > .nav {
     flex-shrink: 0;
   }
+
   > .content {
     flex-grow: 1;
     padding-left: 156px;
@@ -56,47 +55,60 @@ export default {
     }
   }
 }
+
 .content {
   display: flex;
   margin-top: 20px;
+
   > aside {
     flex-shrink: 0;
   }
+
   > main {
     flex-grow: 1;
     padding: 16px;
     background: lightgreen;
   }
 }
+
 aside {
   background: white;
   width: 150px;
-  padding: 16px;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
+
   > h2 {
     margin-bottom: 4px;
     margin-top: 20px;
   }
+
+
   > ol {
-    list-style: none;
+    width: 104%;
     > li {
       padding: 8px 0;
-      color: #52c41a;
-    }
-    >li:hover{
-      color: #237804;
-      cursor: pointer;
+      > a {
+        display: block;
+        padding: 4px 16px;
+        text-decoration: none;
+        color: #52c41a;
+      }
+      >.router-link-active{
+        color: #237804;
+        background-color: opacify(lightgreen,0.5);
+      }
     }
   }
 }
+
 main {
-  overflow:auto;
+  overflow: auto;
 }
-a{
-  text-decoration: none;
+
+.router-link-active {
+  background: white;
 }
 </style>

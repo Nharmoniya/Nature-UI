@@ -65,16 +65,14 @@ export default {
       margin: 0 1em;
       color: #52c41a;
       font-size: 16px;
-      .router-link-exact-active{
+      >.router-link-active{
         color: #237804;
         border-bottom: 3px solid green;
       }
     }
     >li:hover{
-      color: #237804;
       cursor: pointer;
     }
-
   }
   > .toggleAside {
     width: 24px;
