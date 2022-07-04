@@ -67,7 +67,6 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
   }
 }
 
@@ -79,7 +78,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
-
+  border-right: 2px solid #dcdfe6;
   > h2 {
     margin-bottom: 4px;
     margin-top: 20px;
@@ -87,7 +86,7 @@ aside {
 
 
   > ol {
-    width: 104%;
+    width: 101%;
     > li {
       padding: 8px 0;
       > a {
