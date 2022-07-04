@@ -7,7 +7,7 @@
     </div>
     <ul class="menu">
       <li>
-       <router-link to="/doc/switch">组件</router-link>
+       <router-link to="/doc">组件</router-link>
       </li>
       <li>
         <router-link to="/helper">指南</router-link>
@@ -50,6 +50,7 @@ export default {
       font-size: 48px;
     }
   }
+
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -69,15 +70,18 @@ export default {
         color: #237804;
         border-bottom: 3px solid green;
       }
+      //动画，0.08秒内，浅入
+      -webkit-transition: all 80ms ease-in;
     }
     >li:hover{
       cursor: pointer;
+      transform: translateY(-5px)scale(1.2);
     }
   }
   > .toggleAside {
     width: 24px;
     height: 24px;
-    background: red;
+    background: green;
     position: absolute;
     left: 16px;
     top: 50%;
@@ -101,5 +105,23 @@ a{
   text-decoration: none;
   color: #52c41a;
 }
-
+//logo动画
+.toplogo:hover{
+  transform-origin: center bottom;
+  animation: wave 1500ms infinite linear;
+}
+@keyframes wave{
+  0%{
+    transform: rotate(0deg);
+  }
+  33%{
+    transform: rotate(15deg);
+  }
+  66%{
+    transform: rotate(-15deg);
+  }
+  0%{
+    transform: rotate(0deg);
+  }
+}
 </style>

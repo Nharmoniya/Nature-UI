@@ -38,6 +38,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.topnav{
+  position: absolute;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -45,6 +48,7 @@ export default {
 
   > .nav {
     flex-shrink: 0;
+    position: absolute;
   }
 
   > .content {
@@ -76,9 +80,13 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 70px;
-  height: 100%;
+  padding-top: 0px;
+  height: 88%;
   border-right: 2px solid #dcdfe6;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  margin-top: 86px;
   > h2 {
     margin-bottom: 4px;
     margin-top: 20px;
@@ -87,27 +95,31 @@ aside {
 
   > ol {
     width: 101%;
+    background-color: rgb(250,250,250);
     > li {
       padding: 8px 0;
+      .router-link-active{
+        color: #237804;
+        background-color:#d9f7be;
+        border-left: 3px solid #73d13d;
+      }
       > a {
         display: block;
         padding: 4px 16px;
         text-decoration: none;
         color: #52c41a;
       }
-      >.router-link-active{
+    }
+    li:hover{
+      >a{
         color: #237804;
-        background-color: opacify(lightgreen,0.5);
       }
     }
+
   }
 }
 
 main {
   overflow: auto;
-}
-
-.router-link-active {
-  background: white;
 }
 </style>
