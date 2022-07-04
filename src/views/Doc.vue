@@ -17,6 +17,45 @@
           <li>
             <router-link to="/doc/tabs">Tabs 标签</router-link>
           </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
+          </li>
         </ol>
       </aside>
       <main class="content-box">
@@ -76,7 +115,7 @@ export default {
 
 aside {
   background: white;
-  width: 150px;
+  width: 180px;
   position: fixed;
   top: 0;
   left: 0;
@@ -89,19 +128,23 @@ aside {
   margin-top: 86px;
   > h2 {
     margin-bottom: 4px;
-    margin-top: 20px;
+    margin-top: 8px;
   }
 
 
   > ol {
     width: 101%;
     background-color: rgb(250,250,250);
+    padding-right: 10px;
+    margin-left: 6px;
+    list-style:noen;
     > li {
       padding: 8px 0;
       .router-link-active{
         color: #237804;
         background-color:#d9f7be;
-        border-left: 3px solid #73d13d;
+        border-right: 3px solid #73d13d;
+        border-radius: 5%;
       }
       > a {
         display: block;
@@ -109,6 +152,7 @@ aside {
         text-decoration: none;
         color: #52c41a;
       }
+
     }
     li:hover{
       >a{
