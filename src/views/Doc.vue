@@ -3,6 +3,11 @@
     <Topnav class="nav"/>
     <div class="content">
       <aside v-if="menuVisible">
+        <ol>
+        <li>
+          <router-link to="/doc/introduce"><h3>简介</h3></router-link>
+        </li>
+        </ol>
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -17,45 +22,10 @@
           <li>
             <router-link to="/doc/tabs">Tabs 标签</router-link>
           </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
+        </ol>
+        <h2>其它原生</h2>
+        <ol>
+
         </ol>
       </aside>
       <main class="content-box">
@@ -66,9 +36,11 @@
 </template>
 <script lang="ts">
 import Topnav from '../components/Topnav.vue';
-import {inject, Ref} from 'vue';
-
+import {inject, Ref,} from 'vue';
+import Router from 'vue-router';
+const router = Router
 export default {
+
   components: {Topnav},
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible'); // get
@@ -140,12 +112,7 @@ aside {
     list-style:noen;
     > li {
       padding: 8px 0;
-      .router-link-active{
-        color: #237804;
-        background-color:#d9f7be;
-        border-right: 3px solid #73d13d;
-        border-radius: 5%;
-      }
+
       > a {
         display: block;
         padding: 4px 16px;
@@ -165,5 +132,11 @@ aside {
 
 main {
   overflow: auto;
+}
+.router-link-active{
+  color: #237804;
+  background-color:#d9f7be;
+  border-right: 3px solid #73d13d;
+  border-radius: 5%;
 }
 </style>

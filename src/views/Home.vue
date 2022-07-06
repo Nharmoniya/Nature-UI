@@ -8,7 +8,7 @@
       <h3>源代码采用 TypeScript 书写,CSS预处理器为SCSS</h3>
       <p class="actions">
         <a href="https://github.com" title="获取源码" >GitHub</a>
-        <router-link to="/doc" title="开始教程">开始</router-link>
+        <router-link to="/doc/introduce" title="开始教程">开始</router-link>
       </p>
     </div>
     </div>
