@@ -6,7 +6,6 @@
       </router-link>
       <span>Nature-UI</span>
     </div>
-    <div class="version-number">版本号:V-0.0.1 |</div>&nbsp;
     <ul class="menu">
       <li>
         <router-link to="/doc/introduce" >组件</router-link>

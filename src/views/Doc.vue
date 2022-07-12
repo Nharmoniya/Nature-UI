@@ -37,8 +37,6 @@
 <script lang="ts">
 import Topnav from '../components/Topnav.vue';
 import {inject, Ref,} from 'vue';
-import Router from 'vue-router';
-const router = Router
 export default {
 
   components: {Topnav},
