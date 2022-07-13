@@ -12,7 +12,7 @@
       </p>
     </div>
     </div>
-    <footer><span>作者:JasonTu | 微信：Cropsrain874572491 | <a href="https://www.zhihu.com/people/naturl-63/posts">博客：https://www.zhihu.com/people/naturl-63/posts</a></span></footer>
+    <footer><span class="foot-content">作者:JasonTu | 微信：Cropsrain874572491 | <a href="https://www.zhihu.com/people/naturl-63/posts">博客：https://www.zhihu.com/people/naturl-63/posts</a></span></footer>
   </div>
 </template>
 <script lang="ts">
@@ -64,8 +64,13 @@ export default {
   }
 }
 footer{
-  transform: translateY(50%);
+  display: flex;
   color: #237804;
+  justify-content: center;
+
+  .foot-content{
+   margin-top: 30px;
+  }
 }
 a{
   text-decoration: none;

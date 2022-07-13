@@ -34,11 +34,11 @@ export default {
     };
     return {toggleMenu};
   },
-  data() {
-    return {
-      r: '',
-    };
-  },
+  // data() {
+  //   return {
+  //     r: '',
+  //   };
+  // },
   // methods: {
   //   selectType(r) {
   //     if (r !== '1' && r !== '2' && r !== '3') {

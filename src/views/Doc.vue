@@ -25,7 +25,6 @@
         </ol>
         <h2>其它原生</h2>
         <ol>
-
         </ol>
       </aside>
       <main class="content-box">
@@ -62,7 +61,8 @@ export default {
 
   > .content {
     flex-grow: 1;
-    padding-left: 156px;
+    padding-left: 175px;
+    padding-top: 75px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -71,7 +71,6 @@ export default {
 
 .content {
   display: flex;
-  margin-top: 20px;
 
   > aside {
     flex-shrink: 0;
@@ -90,24 +89,24 @@ aside {
   top: 0;
   left: 0;
   padding-top: 0px;
-  height: 88%;
+  height: 100%;
   border-right: 2px solid #dcdfe6;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 10;
-  margin-top: 86px;
+  margin-top: 90px;
   > h2 {
     margin-bottom: 4px;
     margin-top: 8px;
+    text-align: center;
   }
-
-
   > ol {
     width: 101%;
     background-color: rgb(250,250,250);
     padding-right: 10px;
     margin-left: 6px;
     list-style:noen;
+
     > li {
       padding: 8px 0;
 
