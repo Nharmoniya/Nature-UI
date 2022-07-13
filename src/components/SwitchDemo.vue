@@ -2,34 +2,6 @@
   <div>
     <Switch v-model:value="bool"></Switch>
   </div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>
-  <div>1231123</div>  <div>1231123</div>
-
-
-
-
 </template>
 
 <script>
