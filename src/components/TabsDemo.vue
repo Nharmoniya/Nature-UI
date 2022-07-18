@@ -1,11 +1,24 @@
 <template>
-  <div>
-    Tabs
-  </div>
+  <Tabs>
+    <Tab></Tab>
+    <Tab></Tab>
+  </Tabs>
 </template>
 
 <script>
-export default {};
+import {Tabs} from '../lib/Tabs.vue'
+import {ref} from 'vue'
+export default {
+  components:{
+    Tabs,
+  },
+  setup(){
+   const a = ref('导航1')
+    return{
+     a
+    }
+  }
+};
 </script>
 
 <style scoped>
