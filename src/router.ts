@@ -1,47 +1,49 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
-import Home from './views/Home.vue'
-import Doc from './views/Doc.vue'
-import Helper from './views/Helperpage.vue'
-import Theme from './views/Themepage.vue'
-import SwitchDemo from './components/SwitchDemo.vue'
-import ButtonDemo from './components/ButtonDemo.vue'
-import DialogDemo from './components/DialogDemo.vue'
-import TabsDemo from './components/TabsDemo.vue'
-import NotFound from './views/NotFound.vue'
-import Introduce from './components/Introduce.vue'
+import Home from './views/Home.vue';
+import Doc from './views/Doc.vue';
+import Helper from './views/Helperpage.vue';
+import Theme from './views/Themepage.vue';
+import SwitchDemo from './components/SwitchDemo.vue';
+import ButtonDemo from './components/ButtonDemo.vue';
+import DialogDemo from './components/DialogDemo.vue';
+import TabsDemo from './components/TabsDemo.vue';
+import NotFound from './views/NotFound.vue';
+import Introduce from './components/Introduce.vue';
+import InputDemo from './components/InputDemo.vue';
 
-const history = createWebHashHistory()
+const history = createWebHashHistory();
 export const router = createRouter({
-  history:history,
-  routes:[
+  history: history,
+  routes: [
     {
-      path:'/',
+      path: '/',
       //重定向
-      redirect:'/home',
-      component:Home,
+      redirect: '/home',
+      component: Home,
     },
     {
-      path:'/home',
-      component:Home,
+      path: '/home',
+      component: Home,
     },
     {
-      path:'/doc',
-      component:Doc,
-      children:[
-        {path:"introduce",component:Introduce},
-        { path: "switch", component: SwitchDemo },
-        { path: "button", component: ButtonDemo },
-        { path: "dialog", component: DialogDemo },
-        { path: "tabs", component: TabsDemo },
+      path: '/doc',
+      component: Doc,
+      children: [
+        {path: 'introduce', component: Introduce},
+        {path: 'switch', component: SwitchDemo},
+        {path: 'button', component: ButtonDemo},
+        {path: 'dialog', component: DialogDemo},
+        {path: 'tabs', component: TabsDemo},
+        {path: 'input', component: InputDemo},
       ]
     },
     {
-      path:'/helper',
-      component:Helper,
+      path: '/helper',
+      component: Helper,
     },
     {
-      path:'/theme',
-      component:Theme,
+      path: '/theme',
+      component: Theme,
     },
   ]
-})
+});

@@ -14,8 +14,10 @@
 
 <script lang="ts" setup="props, context">
 import {Component, onMounted, ref, watchEffect, SetupContext, computed} from 'vue';
-declare const context: SetupContext
-declare const props: {selected: string}
+import Tab from './Tab.vue';
+
+declare const context: SetupContext;
+declare const props: { selected: string };
 
 export default {
   props: {
@@ -25,15 +27,16 @@ export default {
   },
 };
 //使用ref获取selected的元素
-export const selectedItem = ref<HTMLDivElement>(null);
-export const indicator = ref<HTMLDivElement>(null);
-export const container = ref<HTMLDivElement>(null);
+export const selectedItem = ref< HTMLDivElement >(null);
+export const indicator = ref< HTMLDivElement >(null);
+export const container = ref< HTMLDivElement >(null);
 
 //onmouted中的watcheffect（即在构建中的更新，钩子嵌套)
 onMounted(() => {
   watchEffect(() => {
-    //获取被选中的元素的宽度
-    const {width} = selectedItem.value.getBoundingClientRect();
+    const {
+      width
+    } = selectedItem.value.getBoundingClientRect();
     indicator.value.style.width = width + 'px';
     const {
       left: left1
@@ -49,23 +52,62 @@ onMounted(() => {
 });
 
 
-export const defaults = context.slots.default()
+export const defaults = context.slots.default();
 defaults.forEach((tag) => {
-  if ((tag.type as Component).name !== Tab.name) {
-    throw new Error('Tabs 子标签必须是 Tab')
+  if (tag.type !== Tab) {
+    throw new Error('Tabs 子标签必须是 Tab');
   }
-})
+});
 export const current = computed(() => {
-  return defaults.find(tag => tag.props.title === props.selected)
-})
+  return defaults.find(tag => tag.props.title === props.selected);
+});
 export const titles = defaults.map((tag) => {
-  return tag.props.title
-})
+  return tag.props.title;
+});
 export const select = (title: string) => {
-  context.emit('update:selected', title)
-}
+  context.emit('update:selected', title);
+};
 </script>
 
-<style scoped>
+<style lang="scss">
+$green: #52c41a;
+$color: #333;
+$border-color: #d9d9d9;
 
+.nature-tabs {
+  &-nav {
+    display: flex;
+    color: $color;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+
+    &-item {
+      padding: 8px 0;
+      margin: 0 16px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.selected {
+        color: $green;
+      }
+    }
+
+    &-indicator {
+      position: absolute;
+      height: 3px;
+      background: $green;
+      left: 0;
+      bottom: -1px;
+      width: 100px;
+      transition: all 250ms;
+    }
+  }
+
+  &-content {
+    padding: 8px 0;
+  }
+}
 </style>

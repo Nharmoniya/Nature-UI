@@ -22,6 +22,9 @@
           <li>
             <router-link to="/doc/tabs">Tabs 标签</router-link>
           </li>
+          <li>
+            <router-link to="/doc/input">Input 输入框</router-link>
+          </li>
         </ol>
         <h2>其它原生</h2>
         <ol>
