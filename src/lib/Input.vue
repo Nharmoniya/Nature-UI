@@ -63,12 +63,10 @@ export default {
     margin: 5px;
     font-size: 18px;
     color: grey;
-
     &[disabled] {
       cursor: not-allowed;
       color: grey;
     }
-
     &:focus {
       border: none;
       outline: 1.8px solid #52c41a;

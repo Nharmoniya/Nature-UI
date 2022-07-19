@@ -93,11 +93,12 @@ aside {
   left: 0;
   padding-top: 0px;
   height: 100%;
-  border-right: 2px solid #dcdfe6;
+  //border-right: 2px solid #dcdfe6;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 10;
   margin-top: 90px;
+  box-shadow: 0 0 10px fade_out(black, 0.8);
   > h2 {
     margin-bottom: 4px;
     margin-top: 8px;

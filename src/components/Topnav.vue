@@ -48,8 +48,8 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #dcdfe6;
-
+  //border-bottom: 2px solid #dcdfe6;
+  box-shadow: 0 0 10px fade_out(black, 0.8);
   > .toplogo {
     > span {
       font-size: 48px;
