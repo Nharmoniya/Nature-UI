@@ -1,16 +1,23 @@
 <template>
-  <Input type="text" placeholder="请输入内容"></Input>
-  <Input type="password" disabled ></Input>
-
+  <div>Input实例</div>
+  <Input intype="text" placeholder="请输入内容" v-model="input"></Input>
+  <Input intype="password" ></Input>
+  <Input intype="password" disabled ></Input>
+  <Input intype="text" maxlength="20" shwordlimit></Input>
 </template>
 
-<script>
+<script lang="ts">
 import Input from '../lib/Input.vue';
-
 export default {
   components: {
     Input,
-  }
+  },
+  data(){
+    return{
+      input:''
+    }
+  },
+
 };
 </script>
 

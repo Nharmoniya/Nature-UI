@@ -101,7 +101,7 @@ aside {
   > h2 {
     margin-bottom: 4px;
     margin-top: 8px;
-    text-align: center;
+    margin-left: 20px;
   }
   > ol {
     width: 101%;

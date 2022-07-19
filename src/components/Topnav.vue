@@ -8,16 +8,14 @@
     </div>
     <ul class="menu">
       <li>
-        <router-link to="/doc/introduce" >组件</router-link>
+        <router-link to="/doc">组件</router-link>
       </li>
-
       <li>
         <router-link to="/helper">指南</router-link>
       </li>
       <li>
         <router-link to="/theme">主题</router-link>
       </li>
-
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
   </div>
@@ -33,22 +31,10 @@ export default {
       menuVisible.value = !menuVisible.value;
     };
     return {toggleMenu};
-  },
-  // data() {
-  //   return {
-  //     r: '',
-  //   };
-  // },
-  // methods: {
-  //   selectType(r) {
-  //     if (r !== '1' && r !== '2' && r !== '3') {
-  //       throw new Error('type is unknown');
-  //     }
-  //     this.r = r;
-  //     console.log(this.r);
-  //   },
-  // },
-};
+  }
+  ,
+}
+;
 </script>
 <style lang="scss" scoped>
 .topnav {
@@ -64,10 +50,6 @@ export default {
   align-items: center;
   border-bottom: 2px solid #dcdfe6;
 
-  > .version-number {
-    color: #237804;
-  }
-
   > .toplogo {
     > span {
       font-size: 48px;
@@ -81,7 +63,6 @@ export default {
     > span {
       color: #237804;
       font-size: 20px;
-      font-family: "Arial";
     }
   }
 
@@ -92,7 +73,6 @@ export default {
     list-style: none;
     margin-right: 30px;
     height: 100%;
-
     li {
       margin: 0 1em;
       color: #52c41a;
@@ -100,12 +80,21 @@ export default {
       z-index: 99;
       //动画，0.08秒内，浅入
       //-webkit-transition: all 50ms ease-in;
+      height: 100%;
     }
-
     > li:hover {
-      cursor: pointer;
+      transform: translateY(-6px) scale(1.2);
+      transition: 250ms;
       a {
+        cursor: pointer;
+        text-decoration: none;
         color: #237804;
+      }
+    }
+    .router-link-active {
+      color: #237804;
+      li{
+        transform: translateY(-6px) scale(1.2);
       }
     }
   }
@@ -133,6 +122,7 @@ export default {
       display: inline-block;
     }
   }
+
 }
 
 a {
