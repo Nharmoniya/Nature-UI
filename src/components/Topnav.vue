@@ -25,6 +25,12 @@
 import {inject, Ref} from 'vue';
 
 export default {
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible'); // get
     const toggleMenu = () => {
@@ -32,7 +38,6 @@ export default {
     };
     return {toggleMenu};
   }
-  ,
 }
 ;
 </script>
@@ -83,8 +88,6 @@ export default {
       height: 100%;
     }
     > li:hover {
-      transform: translateY(-6px) scale(1.2);
-      transition: 250ms;
       a {
         cursor: pointer;
         text-decoration: none;
@@ -93,9 +96,6 @@ export default {
     }
     .router-link-active {
       color: #237804;
-      li{
-        transform: translateY(-6px) scale(1.2);
-      }
     }
   }
 

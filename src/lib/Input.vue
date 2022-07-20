@@ -77,7 +77,7 @@ export default {
     position: absolute;
     height: 100%;
     top: 50%;
-    transform: translate(-50px, -6px);
+    transform: translate(-50px, -7px);
     text-align: center;
     color: #c0c4cc;
     transition: all .3s;

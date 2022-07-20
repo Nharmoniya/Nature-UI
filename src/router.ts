@@ -10,7 +10,10 @@ import TabsDemo from './components/TabsDemo.vue';
 import NotFound from './views/NotFound.vue';
 import Introduce from './components/Introduce.vue';
 import InputDemo from './components/InputDemo.vue';
-
+import Alert from './components/AlertDemo.vue';
+// @ts-ignore
+import Checkbox from './components/CheckboxDemo.vue';
+import Radio from './components/RadioDemo.vue'
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
@@ -36,6 +39,9 @@ export const router = createRouter({
         {path: 'dialog', component: DialogDemo},
         {path: 'tabs', component: TabsDemo},
         {path: 'input', component: InputDemo},
+        {path:'alert',component:Alert},
+        {path:'checkbox',component:Checkbox},
+        {path:'radio',component:Radio},
       ]
     },
     {

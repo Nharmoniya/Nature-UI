@@ -25,8 +25,20 @@
           <li>
             <router-link to="/doc/input">Input 输入框</router-link>
           </li>
+          <li>
+            <router-link to="/doc/alert">Alert 消息弹窗</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/checkbox">Checkbox 多选框</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/radio">Alert 消息弹窗</router-link>
+          </li>
         </ol>
         <h2>其它原生</h2>
+        <ol>
+        </ol>
+        <h2>其它链接</h2>
         <ol>
         </ol>
       </aside>
@@ -40,7 +52,6 @@
 import Topnav from '../components/Topnav.vue';
 import {inject, Ref,} from 'vue';
 export default {
-
   components: {Topnav},
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible'); // get
@@ -100,6 +111,7 @@ aside {
   margin-top: 90px;
   box-shadow: 0 0 10px fade_out(black, 0.8);
   > h2 {
+    font-size: 20px;
     margin-bottom: 4px;
     margin-top: 8px;
     margin-left: 20px;
