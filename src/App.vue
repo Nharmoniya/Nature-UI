@@ -38,4 +38,5 @@ export default {
   background-color: #f0f0f0;
   border-radius:32px;
 }
+
 </style>

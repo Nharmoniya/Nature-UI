@@ -75,7 +75,8 @@ export default {
 
   .show-word-limit {
     position: absolute;
-    height: 100%;
+    background-color: white;
+    height: 50%;
     top: 50%;
     transform: translate(-50px, -7px);
     text-align: center;

@@ -7,13 +7,17 @@ import SwitchDemo from './components/SwitchDemo.vue';
 import ButtonDemo from './components/ButtonDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';
 import TabsDemo from './components/TabsDemo.vue';
-import NotFound from './views/NotFound.vue';
 import Introduce from './components/Introduce.vue';
 import InputDemo from './components/InputDemo.vue';
 import Alert from './components/AlertDemo.vue';
 // @ts-ignore
 import Checkbox from './components/CheckboxDemo.vue';
 import Radio from './components/RadioDemo.vue'
+import Expandingcard from './components/expandingcardDemo.vue'
+import Progresssteps from'./components/progressstepsDemo.vue'
+import Hiddensearchwidget from './components/hiddensearchwidgetDemo.vue'
+
+
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
@@ -42,6 +46,9 @@ export const router = createRouter({
         {path:'alert',component:Alert},
         {path:'checkbox',component:Checkbox},
         {path:'radio',component:Radio},
+        {path:'expandingcard',component:Expandingcard},
+        {path:'progresssteps',component:Progresssteps},
+        {path:'hiddensearchwidget',component:Hiddensearchwidget},
       ]
     },
     {

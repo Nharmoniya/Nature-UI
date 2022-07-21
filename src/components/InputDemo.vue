@@ -3,7 +3,7 @@
   <Input intype="text" placeholder="请输入内容" v-model="input"></Input>
   <Input intype="password" ></Input>
   <Input intype="password" disabled ></Input>
-  <Input intype="text" maxlength="20" shwordlimit></Input>
+  <Input intype="text" maxlength="40" shwordlimit></Input>
 </template>
 
 <script lang="ts">
