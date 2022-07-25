@@ -26,9 +26,7 @@ h6 {
 
 body {
   font-size: 16px;
-// 为什么这样写 font-family
-// 答案见 https://github.com/zenozeng/fonts.css/
-line-height: 1.5;
+  line-height: 1.5;
   color: #1d2c40;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
@@ -37,4 +35,7 @@ line-height: 1.5;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+html, body, #app {
+  height: 100%;
 }

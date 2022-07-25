@@ -99,13 +99,12 @@ export default {
   > .toggleAside {
     width: 24px;
     height: 24px;
-    background: green;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    border: 1px solid red;
+    background-image: url("../assets/open.png");
   }
 
   @media (max-width: 500px) {

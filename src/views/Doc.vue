@@ -112,6 +112,7 @@ export default {
   }
 
   > main {
+    overflow: auto;
     flex-grow: 1;
     padding: 40px 100px
   }

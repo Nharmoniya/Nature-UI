@@ -1,8 +1,6 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-import Helper from './views/Helperpage.vue';
-import Theme from './views/Themepage.vue';
 import SwitchDemo from './components/SwitchDemo.vue';
 import ButtonDemo from './components/ButtonDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';
@@ -50,14 +48,6 @@ export const router = createRouter({
         {path:'progresssteps',component:Progresssteps},
         {path:'hiddensearchwidget',component:Hiddensearchwidget},
       ]
-    },
-    {
-      path: '/helper',
-      component: Helper,
-    },
-    {
-      path: '/theme',
-      component: Theme,
     },
   ]
 });
