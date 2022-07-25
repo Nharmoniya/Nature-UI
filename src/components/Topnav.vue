@@ -13,6 +13,9 @@
       <li>
         <a href="https://www.zhihu.com/people/naturl-63/posts" target="_blank">博客</a>
       </li>
+      <li>
+        <a href="https://github.com/Nharmoniya/Nature-UI" target="_blank">Github</a>
+      </li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
   </div>

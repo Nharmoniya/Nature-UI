@@ -7,6 +7,12 @@
     <p>这款组件库其实是我为了学习Vue3所编写的，全程亲手编写，尽量不采用第三方库，包括你现在看到的这个官网也几乎都是我本人自己写的，<strong>适配了手机端</strong>。</p>
     <h1>源码</h1>
     <p>本人并不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 [GitHub](<a href="https://github.com/Nharmoniya/Nature-UI" target="_blank">地址</a>)。你也可以直接查看每个组件的源代码和示例，运行方法见 README.md。</p>
+    <h1>安装</h1>
+    <p>打开终端运行下面的命令</p>
+    <pre><code>npm install nature-ui</code></pre>
+    <p>或</p>
+    <pre><code>yarn add nature-ui</code></pre>
+    <p>下一节：<router-link to="/doc/switch">开始使用</router-link></p>
   </article>
 </template>
 
