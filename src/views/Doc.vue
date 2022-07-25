@@ -32,7 +32,7 @@
             <router-link to="/doc/checkbox">Checkbox 多选框</router-link>
           </li>
           <li>
-            <router-link to="/doc/radio">Alert 消息弹窗</router-link>
+            <router-link to="/doc/radio">Radio 单选框</router-link>
           </li>
         </ol>
         <h2>其它原生</h2>
@@ -89,7 +89,8 @@ export default {
     flex-shrink: 0;
     position: absolute;
   }
-  >.content-box{
+
+  > .content-box {
     overflow: auto;
   }
 
@@ -112,13 +113,19 @@ export default {
 
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding: 40px 100px
+  }
+  @media(max-width: 500px) {
+    > main {
+      flex-grow: 1;
+      padding: 20px 20px
+    }
   }
 }
 
 aside {
   background: white;
-  width: 180px;
+  width: 260px;
   position: fixed;
   top: 0;
   left: 0;
@@ -126,10 +133,10 @@ aside {
   padding-bottom: 12px;
   height: 87%;
   //border-right: 2px solid #dcdfe6;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   z-index: 10;
-  margin-top: 92px;
+  margin-top: 90px;
   box-shadow: 0 0 10px fade_out(black, 0.8);
 
   > h2 {
@@ -162,14 +169,6 @@ aside {
       }
     }
   }
-
-  .expand-ol {
-
-  }
-}
-
-main {
-  overflow: auto;
 }
 
 .router-link-active {

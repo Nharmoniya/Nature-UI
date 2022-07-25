@@ -12,60 +12,66 @@
   </div>
 </template>
 
-<script lang="ts" setup="props, context">
-import {Component, onMounted, ref, watchEffect, SetupContext, computed} from 'vue';
+<script lang="ts" >
 import Tab from './Tab.vue';
-
-declare const context: SetupContext;
-declare const props: { selected: string };
-
+import {
+  onMounted,
+  ref,
+  watchEffect,
+  computed} from 'vue';
 export default {
   props: {
     selected: {
       type: String
     }
   },
-};
-//使用ref获取selected的元素
-export const selectedItem = ref< HTMLDivElement >(null);
-export const indicator = ref< HTMLDivElement >(null);
-export const container = ref< HTMLDivElement >(null);
-
-//onmouted中的watcheffect（即在构建中的更新，钩子嵌套)
-onMounted(() => {
-  watchEffect(() => {
-    const {
-      width
-    } = selectedItem.value.getBoundingClientRect();
-    indicator.value.style.width = width + 'px';
-    const {
-      left: left1
-    } = container.value.getBoundingClientRect();
-    const {
-      left: left2
-    } = selectedItem.value.getBoundingClientRect();
-    const left = left2 - left1;
-    indicator.value.style.left = left + 'px';
-  }, {
-    flush: 'post'
-  });
-});
-
-
-export const defaults = context.slots.default();
-defaults.forEach((tag) => {
-  if (tag.type !== Tab) {
-    throw new Error('Tabs 子标签必须是 Tab');
+  setup(props,context){
+    //使用ref获取selected的元素
+    const selectedItem = ref< HTMLDivElement >(null);
+    const indicator = ref< HTMLDivElement >(null);
+    const container = ref< HTMLDivElement >(null);
+    //onmouted中的watcheffect（即在构建中的更新，钩子嵌套)
+    onMounted(() => {
+      watchEffect(() => {
+        const {
+          width
+        } = selectedItem.value.getBoundingClientRect();
+        indicator.value.style.width = width + 'px';
+        const {
+          left: left1
+        } = container.value.getBoundingClientRect();
+        const {
+          left: left2
+        } = selectedItem.value.getBoundingClientRect();
+        const left = left2 - left1;
+        indicator.value.style.left = left + 'px';
+      })
+    });
+    const defaults = context.slots.default();
+    defaults.forEach((tag) => {
+      if (tag.type !== Tab) {
+        throw new Error('Tabs 子标签必须是 Tab');
+      }
+    });
+    const current = computed(() => {
+      return defaults.find(tag => tag.props.title === props.selected);
+    });
+    const titles = defaults.map((tag) => {
+      return tag.props.title;
+    });
+    const select = (title: string) => {
+      context.emit('update:selected', title);
+    };
+    return{
+      current,
+      titles,
+      select,
+      defaults,
+      selectedItem,
+      indicator,
+      container,
+    }
   }
-});
-export const current = computed(() => {
-  return defaults.find(tag => tag.props.title === props.selected);
-});
-export const titles = defaults.map((tag) => {
-  return tag.props.title;
-});
-export const select = (title: string) => {
-  context.emit('update:selected', title);
 };
 </script>
 

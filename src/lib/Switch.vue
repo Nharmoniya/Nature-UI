@@ -29,7 +29,9 @@ $h2: $h - 4px;
   border-radius: $h/2;
   position: relative;
   box-shadow: 0 0 3px fade_out(black, 0.8);
-
+  &[disabled]{
+    cursor: not-allowed;
+  }
   > span {
     position: absolute;
     top: 2px;
@@ -65,5 +67,6 @@ $h2: $h - 4px;
       margin-left: -4px;
     }
   }
+
 }
 </style>

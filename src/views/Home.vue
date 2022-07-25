@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <div class="topnavAndBanner">
     <Topnav/>
     <div class="banner">
@@ -23,10 +23,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topnavAndBanner{
+  background-image: url("../assets/background.png");
 
-  background: linear-gradient(0deg, rgba(183,235,143,1) 0%, rgba(149,222,100,1) 49%, rgba(82,196,26,1) 100%);
-  clip-path: ellipse(80% 60% at 50% 40%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .banner {
   padding: 180px  0;

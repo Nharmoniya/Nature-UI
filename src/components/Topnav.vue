@@ -11,10 +11,7 @@
         <router-link to="/doc">组件</router-link>
       </li>
       <li>
-        <router-link to="/helper">指南</router-link>
-      </li>
-      <li>
-        <router-link to="/theme">主题</router-link>
+        <a href="https://www.zhihu.com/people/naturl-63/posts" target="_blank">博客</a>
       </li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
