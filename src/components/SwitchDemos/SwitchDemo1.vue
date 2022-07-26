@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Switch from '../lib/Switch.vue';
+import Switch from '../../lib/Switch.vue';
 import {ref} from 'vue';
 
 export default {
@@ -23,7 +23,7 @@ export default {
 <style lang="scss">
 </style>
 <script>
-  import Demo from './Demo';
+  import Demo from '../Demo';
   export default {
     components: {Demo}
   };

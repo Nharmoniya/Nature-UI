@@ -1,59 +1,48 @@
 <template>
-  <div>
-    Dialog实例
-  </div>
-  <div>
-    实例1
-  </div>
-  <Button @click="toggle">打开弹窗</Button>
-  <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="confirm" :cancel="resolve">
-    <template v-slot:title>
-      <strong>标题</strong>
-    </template>
-    <template v-slot:content>
-      <h2>Hello world！</h2>
-    </template>
-  </Dialog>
-  <div>实例2</div>
-  <Button @click="showDialog">打开弹窗</Button>
+  <article class="markdown-body">
+    <h1>Dialog弹窗</h1>
+    <p>参数：visible，closeOnClickOverlay，ok，cancel</p>
+  </article>
+  <Demo :component="DialogDemo1"></Demo>
+  <Demo :component="DialogDemo2"></Demo>
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue';
-import Dialog from '../lib/Dialog.vue';
-import {openDialog} from '../lib/index.ts';
-import {ref,h} from 'vue';
+import DialogDemo1 from './DialogDemos/DialogDemo1.vue';
+import DialogDemo2 from './DialogDemos/DialogDemo2.vue';
+import Demo from './Demo.vue';
 
 export default {
-  components: {Dialog, Button},
+  components: {Demo},
   setup() {
-    const x = ref(false);
-    const toggle = () => {
-      x.value = !x.value;
+    return {
+      DialogDemo1,
+      DialogDemo2
     };
-    const confirm = () => {
-      return false;
-    };
-    const resolve = () => {
-      return false;
-    };
-    const showDialog=()=>{
-     openDialog({
-       title:h('strong',{},'标题'),
-       content:'你好',
-       ok(){
-         console.log('ok')
-       },
-       cancel(){
-         console.log('cancel')
-       }
-     })
-    }
-    return {x, toggle, confirm, resolve,showDialog};
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$border-color: #d9d9d9;
+article {
+  padding: 24px;
+  background-color: white;
+  color: #1d2c40;
 
+  > pre {
+    background-color: #dcdfe6;
+  }
+
+  > p {
+    > code {
+      background-color: rgb(243, 244, 244);
+    }
+
+    > a {
+      text-decoration: none;
+      color: #52c41a;
+    }
+  }
+}
 </style>

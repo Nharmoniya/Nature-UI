@@ -106,15 +106,15 @@ export default {
 
 .content {
   display: flex;
-
+  overflow: auto;
   > aside {
     flex-shrink: 0;
   }
 
   > main {
-    overflow: auto;
     flex-grow: 1;
-    padding: 40px 100px
+    padding: 40px 100px;
+    overflow: auto;
   }
   @media(max-width: 500px) {
     > main {
@@ -130,14 +130,15 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   padding-top: 12px;
   padding-bottom: 12px;
-  height: 87%;
+  height: auto;
   //border-right: 2px solid #dcdfe6;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 10;
-  margin-top: 90px;
+  margin-top: 78px;
   box-shadow: 0 0 10px fade_out(black, 0.8);
 
   > h2 {

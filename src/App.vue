@@ -28,6 +28,7 @@ export default {
 ::-webkit-scrollbar{
   width: 10px;
   height: 10px;
+  z-index: 2;
 }
 ::-webkit-scrollbar-thumb{
   background-color: #73d13d;
