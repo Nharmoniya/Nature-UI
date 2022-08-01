@@ -44,6 +44,7 @@ article{
     opacity: 0.8;
     background-color: #52c41a;
     display: inline-block;
+    border-radius: 20%;
   }
 
 }

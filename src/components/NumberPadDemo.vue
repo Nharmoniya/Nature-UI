@@ -1,29 +1,23 @@
+
 <template>
-  <article class="markdown-body">
-    <h1>Tabs导航栏</h1>
-    <p>参数：value，disabled</p>
-    <p style="color: red">注意！内部标签必须为Tab否则会报错</p>
+  <article  class="markdown-body">
+    <h1>NumberPad 计算板</h1>
+    <p>此处只作为展示，若需使用建议直接看源码</p>
   </article>
-  <Demo :component="TabsDemo1"></Demo>
+<Demo :component="NumberPad1"></Demo>
 </template>
 
-<script lang="ts">
-
-import {
-  ref
-} from 'vue';
+<script>
 import Demo from './Demo.vue';
-import TabsDemo1 from './TabsDemos/TabsDemo1.vue';
-
+import NumberPad1 from './NumberPadDemos/NumberPadDemo1.vue'
 export default {
-  components: {
-    Demo
-  },
-  setup() {
-    return {
-      TabsDemo1
-    };
+  components: {Demo},
+  setup(){
+    return{
+      NumberPad1,
+    }
   }
+
 };
 </script>
 

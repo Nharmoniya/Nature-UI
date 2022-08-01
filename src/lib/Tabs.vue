@@ -47,12 +47,15 @@ export default {
         indicator.value.style.left = left + 'px';
       })
     });
+    //获取defaults
     const defaults = context.slots.default();
+    //遍历循环其中的tag如果tag的类型不等于Tab那么就抛出一个警告
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
         throw new Error('Tabs 子标签必须是 Tab');
       }
     });
+    //从defaults这种找到当前被选中的
     const current = computed(() => {
       return defaults.find(tag => tag.props.title === props.selected);
     });

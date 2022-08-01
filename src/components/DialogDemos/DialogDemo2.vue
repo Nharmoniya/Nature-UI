@@ -5,12 +5,10 @@
 
 <script lang="ts">
 import Button from '../../lib/Button.vue';
-import Dialog from '../../lib/Dialog.vue';
 import {openDialog} from '../../lib/index.ts';
 import {h} from 'vue';
 export default {
   components:{
-    Dialog,
     Button,
   },
   setup(){

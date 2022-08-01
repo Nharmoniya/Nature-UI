@@ -22,9 +22,3 @@ export default {
 
 <style lang="scss">
 </style>
-<script>
-  import Demo from '../Demo';
-  export default {
-    components: {Demo}
-  };
-</script>

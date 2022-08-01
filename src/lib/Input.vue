@@ -49,7 +49,6 @@ export default {
 <style lang="scss">
 .nature-input-main {
   position: relative;
-
   .nature-input {
     display: inline-block;
     height: 40px;

@@ -2,74 +2,78 @@
   <div class="layout">
     <Topnav class="nav"/>
     <div class="content">
-      <aside v-if="menuVisible">
-        <ol>
-          <li>
-            <router-link to="/doc/introduce"><h3>简介</h3></router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">Switch 开关</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button 按钮</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog 对话框</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 标签</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/input">Input 输入框</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/alert">Alert 消息弹窗</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/checkbox">Checkbox 多选框</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/radio">Radio 单选框</router-link>
-          </li>
-        </ol>
-        <h2>其它原生</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/expandingcard">伸缩卡片</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/progresssteps">步骤条</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/hiddensearchwidget">隐藏式搜索框</router-link>
-          </li>
-        </ol>
-        <h2>其它链接</h2>
-        <ol class="expand-ol">
-          <li>
-            <router-link to="/doc/luckcatbook">幸运猫记账本</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/mapleleavesnote">枫叶笔记</router-link>
-          </li>
-        </ol>
-      </aside>
+      <transition name="active">
+        <aside v-show="menuVisible">
+          <ol>
+            <li>
+              <router-link to="/doc/introduce"><h3>简介</h3></router-link>
+            </li>
+          </ol>
+          <h2>组件列表</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/switch">Switch 开关</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/button">Button 按钮</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/dialog">Dialog 对话框</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/tabs">Tabs 标签</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/input">Input 输入框</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/checkbox">Checkbox 多选框</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/radio">Radio 单选框</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/numberpad">NumberPad 计算板</router-link>
+            </li>
+          </ol>
+          <h2>其它原生</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/progresssteps">步骤条</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/hiddensearchwidget">隐藏式搜索框</router-link>
+            </li>
+          </ol>
+          <h2>其它链接</h2>
+          <ol class="expand-ol">
+            <li>
+              <router-link to="/doc/luckcatbook">幸运猫记账本</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/mapleleavesnote">枫叶笔记</router-link>
+            </li>
+          </ol>
+        </aside>
+      </transition>
+
       <main class="content-box">
-        <router-view/>
+          <router-view/>
       </main>
+
     </div>
   </div>
 </template>
 <script lang="ts">
 import Topnav from '../components/Topnav.vue';
 import {inject, Ref,} from 'vue';
+import {useRoute} from 'vue-router';
+import 'animate.css';
 
 export default {
   components: {Topnav},
   setup() {
+    const route = useRoute();
     const menuVisible = inject<Ref<boolean>>('menuVisible'); // get
     return {menuVisible};
   },
@@ -107,6 +111,7 @@ export default {
 .content {
   display: flex;
   overflow: auto;
+
   > aside {
     flex-shrink: 0;
   }
@@ -116,6 +121,7 @@ export default {
     padding: 40px 100px;
     overflow: auto;
   }
+
   @media(max-width: 500px) {
     > main {
       flex-grow: 1;
@@ -172,6 +178,19 @@ aside {
     }
   }
 }
+
+.active-enter-active, .active-leave-active {
+  transition: all 0.5s;
+}
+
+.active-enter-from, .active-leave-to {
+  opacity: 0;
+}
+
+.active-enter-to, .active-leave-from {
+  opacity: 1;
+}
+
 
 .router-link-active {
   color: #237804;
