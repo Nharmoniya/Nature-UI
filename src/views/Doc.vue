@@ -35,6 +35,9 @@
             <li>
               <router-link to="/doc/numberpad">NumberPad 计算板</router-link>
             </li>
+            <li>
+              <router-link to="/" @click.prevent>...持续更新中</router-link>
+            </li>
           </ol>
           <h2>其它原生</h2>
           <ol>
