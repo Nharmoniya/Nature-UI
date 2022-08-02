@@ -1,14 +1,20 @@
 <template>
   <label class="nature-label-checkbox" >
-    <input type="checkbox"  :checked="checked" :disabled="disabled" @click="toggle"/>
+    <input type="checkbox"  :checked="checked" :disabled="disabled" @click="toggle" v-model="value"/>
     <span class="show-box"></span>
   </label>
   <span v-if="label" class="label-content">{{label}}</span>
+  <div>{{value}}</div>
 </template>
 
 <script lang="ts">
 
 export default {
+  data(){
+    return{
+      value:null
+    }
+  },
   props:{
     border:{
       type:Boolean,

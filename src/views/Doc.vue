@@ -39,15 +39,6 @@
               <router-link to="/" @click.prevent>...持续更新中</router-link>
             </li>
           </ol>
-          <h2>其它原生</h2>
-          <ol>
-            <li>
-              <router-link to="/doc/progresssteps">步骤条</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/hiddensearchwidget">隐藏式搜索框</router-link>
-            </li>
-          </ol>
           <h2>其它链接</h2>
           <ol class="expand-ol">
             <li>

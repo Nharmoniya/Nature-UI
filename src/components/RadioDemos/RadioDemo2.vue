@@ -1,7 +1,7 @@
 <demo>支持checked已选中</demo>
 <template>
-  <Radio name="sex" label="男" v-model="value" checked></Radio>
-  <Radio name="sex" label="女" v-model="value"></Radio>
+  <Radio name="sex1" label="男" v-model="value" checked></Radio>
+  <Radio name="sex1" label="女" v-model="value"></Radio>
 </template>
 
 <script>

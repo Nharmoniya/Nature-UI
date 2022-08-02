@@ -1,7 +1,13 @@
 <template>
   <label class="nature-label-checkbox">
   <span  class="radios-border" >
-  <input type="radio" :disabled="disabled" :value="label" :name="name" :checked="checked"/>{{label}}
+  <input type="radio"
+         :disabled="disabled"
+         :value="label"
+         :name="name"
+         :checked="checked"
+         v-model="value"
+  />{{label}}
     <span class="show-box"></span>
   </span>
   </label>
@@ -28,8 +34,14 @@ export default {
       type:Boolean,
       default:false,
     }
-  }
+  },
+  data(){
+    return{
+      value:null,
+    }
+  },
 };
 </script>
 
+<style>
 </style>
