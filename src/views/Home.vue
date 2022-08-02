@@ -22,7 +22,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topnavAndBanner{
-  background-image: url("../assets/background.png");
+  background-image: url('../assets/background.png');
   min-height: 100vh
 }
 .banner {

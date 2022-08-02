@@ -8,10 +8,8 @@
     <h1>源码</h1>
     <p>本人并不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 [GitHub](<a href="https://github.com/Nharmoniya/Nature-UI" target="_blank">地址</a>)。你也可以直接查看每个组件的源代码和示例，运行方法见 README.md。</p>
     <h1>安装</h1>
-    <p>打开终端运行下面的命令</p>
-    <pre><code>npm install nature-ui</code></pre>
-    <p>或</p>
-    <pre><code>yarn add nature-ui</code></pre>
+    <p>由于本项目进攻学习，所以并没有将代码包发布至npm，如果你需要下载下来学习请打开github仓库直接clone下来</p>
+
     <p>下一节：<router-link to="/doc/switch">开始使用</router-link></p>
   </article>
 </template>
