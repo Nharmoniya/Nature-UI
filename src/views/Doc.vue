@@ -39,15 +39,6 @@
               <router-link to="/" @click.prevent>...持续更新中</router-link>
             </li>
           </ol>
-          <h2>其它链接</h2>
-          <ol class="expand-ol">
-            <li>
-              <router-link to="/doc/luckcatbook">幸运猫记账本</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/mapleleavesnote">枫叶笔记</router-link>
-            </li>
-          </ol>
         </aside>
       </transition>
 
